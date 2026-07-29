@@ -1,0 +1,189 @@
+:root {
+  /* FHNW Color Palette */
+  --fhnw-yellow: #FDE70E;
+  --fhnw-charcoal: #2D373C;
+  --fhnw-red: #D20537;
+  --fhnw-gray: #8C9196;
+  --fhnw-pink: #EB829B;
+  --fhnw-light-gray: #BEC3C8;
+  --fhnw-teal: #006E6E;
+  --fhnw-black: #000000;
+  --fhnw-white: #FFFFFF;
+
+  /* Slidev theme variables */
+  --slidev-theme-primary: #FDE70E;
+  --slidev-theme-accent: #D20537;
+}
+
+/* Global slide styling */
+.slidev-layout {
+  font-family: 'Arial', sans-serif;
+  color: var(--fhnw-black);
+  background: var(--fhnw-white);
+  padding: 2rem 2.5rem;
+  padding-bottom: 3rem; /* Space for footer */
+}
+
+/* Headings use Georgia, normal weight (not bold!) */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  color: var(--fhnw-black);
+}
+
+/* Frame title with dashed separator (normal slides only, not cover) */
+.slidev-layout:not(.cover) h1 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--fhnw-charcoal);
+}
+
+/* List styling with triangle bullets */
+.slidev-layout ul {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+.slidev-layout ul li {
+  position: relative;
+  margin-bottom: 0.4em;
+}
+
+.slidev-layout ul li::before {
+  content: '';
+  position: absolute;
+  left: -1.2em;
+  top: 0.5em;
+  width: 0;
+  height: 0;
+  border-top: 0.3em solid transparent;
+  border-bottom: 0.3em solid transparent;
+  border-left: 0.45em solid var(--fhnw-black);
+}
+
+/* Nested list items - smaller triangles */
+.slidev-layout ul ul li::before {
+  border-left-color: var(--fhnw-gray);
+  border-top-width: 0.25em;
+  border-bottom-width: 0.25em;
+  border-left-width: 0.35em;
+}
+
+/* Bold and emphasis */
+.slidev-layout strong {
+  font-weight: bold;
+}
+
+.slidev-layout em {
+  font-style: italic;
+}
+
+/* Highlighted/alert text */
+.slidev-layout .text-red,
+.slidev-layout .alert {
+  color: var(--fhnw-red);
+  font-weight: bold;
+}
+
+/* Block/callout styling */
+.slidev-layout blockquote {
+  background: rgba(253, 231, 14, 0.3);
+  border-left: 4px solid var(--fhnw-yellow);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+}
+
+.slidev-layout blockquote p {
+  margin: 0;
+}
+
+/* Table styling */
+.slidev-layout table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.slidev-layout table th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid var(--fhnw-black);
+  padding: 0.4rem 0.6rem;
+}
+
+.slidev-layout table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--fhnw-light-gray);
+}
+
+/* Code blocks */
+.slidev-layout pre {
+  background: #f5f5f5;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.slidev-layout code {
+  font-family: 'Inconsolata', 'Fira Code', monospace;
+}
+
+.slidev-layout :not(pre) > code {
+  background: rgba(253, 231, 14, 0.2);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Links */
+.slidev-layout a {
+  color: var(--fhnw-teal);
+  text-decoration: none;
+}
+
+.slidev-layout a:hover {
+  text-decoration: underline;
+}
+
+/* Cover layout - minimal overrides since cover.vue handles its own styles */
+.slidev-layout.cover {
+  padding: 0;
+}
+
+.slidev-layout.cover h1 {
+  border-bottom: none;
+}
+
+/* Intro/Section layout */
+.slidev-layout.intro,
+.slidev-layout.section {
+  @apply h-full grid place-content-center;
+}
+
+.slidev-layout.intro h1,
+.slidev-layout.section h1 {
+  font-size: 2.5rem;
+  border-bottom: none;
+}
+
+/* Center layout */
+.slidev-layout.center {
+  @apply h-full grid place-content-center text-center;
+}
+
+.slidev-layout.center h1 {
+  border-bottom: none;
+}
+
+/* End layout */
+.slidev-layout.end {
+  @apply h-full grid place-content-center text-center;
+}
+
+.slidev-layout.end h1 {
+  font-size: 2rem;
+  border-bottom: none;
+}
