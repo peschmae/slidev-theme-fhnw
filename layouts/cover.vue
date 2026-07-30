@@ -21,16 +21,6 @@ const { $slidev } = useSlideContext()
       <slot />
     </div>
 
-    <!-- Footer bar -->
-    <div class="cover-footer">
-      <div class="cover-footer-left">
-        <span v-if="$slidev.configs.title">{{ $slidev.configs.title }}</span>
-        <span v-if="$slidev.configs.author"> — {{ $slidev.configs.author }}</span>
-      </div>
-      <div class="cover-footer-right">
-        1
-      </div>
-    </div>
   </div>
 </template>
 
@@ -89,7 +79,7 @@ const { $slidev } = useSlideContext()
   margin: 0 0 0.75rem 0;
   padding: 0 0 0.75rem 0;
   border: none;
-  border-bottom: 1px dashed #2D373C;
+  border-bottom: 1px solid #2D373C;
   line-height: 1.2;
 }
 
