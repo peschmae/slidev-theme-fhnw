@@ -1,14 +1,32 @@
 {
-  "name": "slidev-theme-fhnw-theme",
-  "version": "0.0.0",
+  "name": "@peschmae/slidev-theme-fhnw",
+  "version": "0.0.1",
   "type": "module",
+  "description": "FHNW Slidev theme based on the official FHNW LaTeX Beamer template",
   "keywords": [
     "slidev-theme",
     "slidev"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peschmae/slidev-theme-fhnw.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "engines": {
     "node": ">=20.12.0"
   },
+  "files": [
+    "layouts",
+    "components",
+    "styles",
+    "setup",
+    "public",
+    "global-bottom.vue",
+    "package.json"
+  ],
   "scripts": {
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
@@ -21,7 +39,6 @@
   "devDependencies": {
     "@slidev/cli": "^52.18.0"
   },
-  "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
     "colorSchema": "light",
     "defaults": {
