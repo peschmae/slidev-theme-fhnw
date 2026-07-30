@@ -43,9 +43,9 @@
     "colorSchema": "light",
     "defaults": {
       "fonts": {
-        "sans": "Arial",
-        "serif": "Georgia",
-        "mono": "Inconsolata"
+        "sans": "Inter",
+        "serif": "Spectral",
+        "mono": "Roboto Mono"
       }
     }
   }

@@ -1,14 +1,14 @@
 # slidev-theme-fhnw
 
-A [Slidev](https://github.com/slidevjs/slidev) theme based on the official FHNW (University of Applied Sciences and Arts Northwestern Switzerland) LaTeX Beamer template.
+A [Slidev](https://github.com/slidevjs/slidev) theme based on the official FHNW (University of Applied Sciences and Arts Northwestern Switzerland) Bootstrap V5 styleguide and LaTeX Beamer template.
 
 ## Features
 
 - Yellow header bar with FHNW and swissuniversities logos on the cover slide
-- Georgia serif headings with dashed separators
+- Inter sans-serif headings (weight 500) with solid separators
 - Triangle bullet points
 - Yellow footer bar with title, author, and page number
-- FHNW color palette (yellow, charcoal, red, teal)
+- FHNW color palette matching the official Bootstrap V5 styleguide
 - Light color scheme optimized for projection
 
 ## Install
@@ -58,7 +58,7 @@ July 2026
 
 ### Regular Slides
 
-Regular slides get the dashed title separator and yellow footer automatically:
+Regular slides get the title separator and yellow footer automatically:
 
 ```md
 ---
@@ -124,21 +124,30 @@ All other built-in Slidev layouts (`default`, `center`, `section`, `end`, `two-c
 
 ## Color Palette
 
+Based on the official FHNW Bootstrap V5 styleguide:
+
 | Color | Hex | Usage |
 | --- | --- | --- |
-| Yellow | `#FDE70E` | Header, footer, blocks |
-| Charcoal | `#2D373C` | Separators, secondary text |
-| Red | `#D20537` | Highlights, alerts |
-| Teal | `#006E6E` | Links |
-| Gray | `#8C9196` | Subtle elements |
-| Black | `#000000` | Body text |
-| White | `#FFFFFF` | Background |
+| Yellow (secondary) | `#fde703` | Header, footer, accents |
+| Black (primary) | `#000000` | Emphasis, headings |
+| Body text | `#4c4c4c` | Default text color |
+| Danger/Red | `#df305b` | Alerts, code highlights |
+| Gray 100 | `#f7f7f5` | Table striping, code blocks |
+| Gray 200 | `#f1f1ee` | Hover states |
+| Gray 400 | `#deded9` | Borders, separators |
+| Gray 600 | `#999999` | Subtle elements |
+| Gray 700 | `#767573` | Secondary text |
+| Gray dark | `#343a40` | Heading separators |
+| White | `#ffffff` | Background |
 
 ## Fonts
 
-- **Headings:** Arial (sans-serif)
-- **Body:** Arial (sans-serif)
-- **Code:** Inconsolata (monospace)
+Following the official FHNW Bootstrap V5 styleguide:
+
+- **Headings:** Inter (weight 500)
+- **Body:** Inter (weight 400)
+- **Blockquotes:** Spectral (italic, weight 300)
+- **Code:** System monospace stack (SFMono-Regular, Menlo, Monaco, Consolas)
 
 ## Contributing
 

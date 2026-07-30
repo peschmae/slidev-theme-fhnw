@@ -1,49 +1,69 @@
 :root {
-  /* FHNW Color Palette */
-  --fhnw-yellow: #FDE70E;
-  --fhnw-charcoal: #2D373C;
-  --fhnw-red: #D20537;
-  --fhnw-gray: #8C9196;
-  --fhnw-pink: #EB829B;
-  --fhnw-light-gray: #BEC3C8;
-  --fhnw-teal: #006E6E;
+  /* FHNW Color Palette — from official Bootstrap V5 styleguide */
+  --fhnw-yellow: #fde703;
   --fhnw-black: #000000;
-  --fhnw-white: #FFFFFF;
+  --fhnw-white: #ffffff;
+  --fhnw-body-color: rgb(20, 20, 20);
+
+  /* Semantic colors — matching official FHNW Bootstrap V5 styleguide */
+  --fhnw-primary: #000000;
+  --fhnw-secondary: #fde703;
+  --fhnw-success: #28a745;
+  --fhnw-info: #dee2e6;
+  --fhnw-warning: #fbd100;
+  --fhnw-danger: #df305b;
+  --fhnw-light: #f1f1ee;
+  --fhnw-dark: #dee2e6;
+
+  /* Gray scale */
+  --fhnw-gray-100: #f7f7f5;
+  --fhnw-gray-200: #f1f1ee;
+  --fhnw-gray-400: #deded9;
+  --fhnw-gray-500: #bebdb9;
+  --fhnw-gray-600: #999999;
+  --fhnw-gray-700: #767573;
+  --fhnw-gray-dark: #343a40;
 
   /* Slidev theme variables */
-  --slidev-theme-primary: #FDE70E;
-  --slidev-theme-accent: #D20537;
+  --slidev-theme-primary: #fde703;
+  --slidev-theme-accent: #df305b;
 }
 
-/* Global slide styling */
+/* ============================================================
+   Global slide styling
+   ============================================================ */
+
 .slidev-layout {
-  font-family: 'Arial', sans-serif;
-  color: var(--fhnw-black);
+  font-family: 'Inter', sans-serif;
+  color: var(--fhnw-body-color);
   background: var(--fhnw-white);
   padding: 2rem 2.5rem;
-  padding-bottom: 3rem; /* Space for footer */
+  padding-bottom: 3rem;
 }
 
-/* Headings use Georgia, normal weight (not bold!) */
+/* Headings — Inter, weight 500 (medium) */
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3,
 .slidev-layout h4 {
-  font-family: 'Arial', sans-serif;
-  font-weight: normal;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   color: var(--fhnw-black);
 }
 
-/* Frame title with dashed separator (normal slides only, not cover) */
+/* Frame title with separator (normal slides only) */
 .slidev-layout:not(.cover) h1 {
   font-size: 1.75rem;
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--fhnw-charcoal);
+  border-bottom: 1px solid var(--fhnw-gray-dark);
 }
 
-/* List styling with triangle bullets */
+/* ============================================================
+   Lists
+   ============================================================ */
+
 .slidev-layout ul {
   list-style: none;
   padding-left: 1.2em;
@@ -63,101 +83,214 @@
   height: 0;
   border-top: 0.3em solid transparent;
   border-bottom: 0.3em solid transparent;
-  border-left: 0.45em solid var(--fhnw-black);
+  border-left: 0.45em solid var(--fhnw-body-color);
 }
 
-/* Nested list items - smaller triangles */
 .slidev-layout ul ul li::before {
-  border-left-color: var(--fhnw-gray);
+  border-left-color: var(--fhnw-gray-600);
   border-top-width: 0.25em;
   border-bottom-width: 0.25em;
   border-left-width: 0.35em;
 }
 
-/* Bold and emphasis */
+/* ============================================================
+   Inline styles
+   ============================================================ */
+
 .slidev-layout strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .slidev-layout em {
   font-style: italic;
 }
 
-/* Highlighted/alert text */
 .slidev-layout .text-red,
 .slidev-layout .alert {
-  color: var(--fhnw-red);
-  font-weight: bold;
+  color: var(--fhnw-danger);
+  font-weight: 700;
 }
 
-/* Block/callout styling */
+/* ============================================================
+   Blockquotes — Spectral italic serif
+   ============================================================ */
+
 .slidev-layout blockquote {
-  background: rgba(253, 231, 14, 0.3);
   border-left: 4px solid var(--fhnw-yellow);
   padding: 0.75rem 1rem;
   margin: 1rem 0;
+  background: transparent;
 }
 
 .slidev-layout blockquote p {
+  font-family: 'Spectral', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: var(--fhnw-body-color);
   margin: 0;
 }
 
-/* Table styling */
+/* ============================================================
+   Tables
+   ============================================================ */
+
 .slidev-layout table {
   border-collapse: collapse;
   width: 100%;
 }
 
 .slidev-layout table th {
-  font-weight: bold;
+  font-weight: 500;
   text-align: left;
   border-bottom: 2px solid var(--fhnw-black);
-  padding: 0.4rem 0.6rem;
+  padding: 0.75rem;
 }
 
 .slidev-layout table td {
-  padding: 0.4rem 0.6rem;
-  border-bottom: 1px solid var(--fhnw-light-gray);
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--fhnw-gray-400);
 }
 
-/* Code blocks */
+.slidev-layout table tr:nth-child(even) {
+  background: var(--fhnw-gray-100);
+}
+
+/* ============================================================
+   Code
+   ============================================================ */
+
 .slidev-layout pre {
-  background: #f5f5f5;
-  border-radius: 4px;
+  background: var(--fhnw-gray-100);
+  border-radius: 0;
   font-size: 0.85em;
 }
 
 .slidev-layout code {
-  font-family: 'Inconsolata', 'Fira Code', monospace;
+  font-family: 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .slidev-layout :not(pre) > code {
-  background: rgba(253, 231, 14, 0.2);
+  background: var(--fhnw-gray-200);
   padding: 0.1em 0.3em;
-  border-radius: 3px;
+  border-radius: 0;
   font-size: 0.9em;
+  color: var(--fhnw-danger);
 }
 
-/* Links */
+/* ============================================================
+   Links
+   ============================================================ */
+
 .slidev-layout a {
-  color: var(--fhnw-teal);
-  text-decoration: none;
-}
-
-.slidev-layout a:hover {
+  color: var(--fhnw-body-color);
   text-decoration: underline;
 }
 
-/* Cover layout - minimal overrides since cover.vue handles its own styles */
+.slidev-layout a:hover {
+  color: var(--fhnw-black);
+}
+
+/* ============================================================
+   Cover layout
+   ============================================================ */
+
 .slidev-layout.cover {
-  padding: 0;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .slidev-layout.cover h1 {
   border-bottom: none;
 }
 
-/* Intro/Section layout */
+/* Yellow header ~35% height */
+.slidev-layout.cover .cover-header {
+  background: var(--fhnw-yellow);
+  padding: 2rem 2.5rem;
+  min-height: 35%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.slidev-layout.cover .cover-header-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slidev-layout.cover .cover-logo {
+  height: 4rem;
+}
+
+.slidev-layout.cover .cover-header-right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slidev-layout.cover .cover-swissuni {
+  height: 1.5rem;
+}
+
+/* Content area */
+.slidev-layout.cover .cover-content {
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.slidev-layout.cover .cover-content h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--fhnw-black);
+  margin: 0 0 0.75rem 0;
+  padding: 0 0 0.75rem 0;
+  border-bottom: 1px solid var(--fhnw-gray-dark);
+  line-height: 1.2;
+}
+
+.slidev-layout.cover .cover-content h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--fhnw-gray-700);
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  border: none;
+}
+
+.slidev-layout.cover .cover-content p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0.15rem 0;
+  color: var(--fhnw-gray-dark);
+  line-height: 1.5;
+}
+
+.slidev-layout.cover .cover-content small {
+  font-size: 0.7rem;
+  color: var(--fhnw-gray-700);
+}
+
+.slidev-layout.cover .cover-content a {
+  color: var(--fhnw-gray-dark);
+  text-decoration: underline;
+}
+
+.slidev-layout.cover .cover-content hr,
+.slidev-layout.cover .cover-content h1::after {
+  display: none;
+}
+
+/* ============================================================
+   Section / Intro layouts
+   ============================================================ */
+
 .slidev-layout.intro,
 .slidev-layout.section {
   @apply h-full grid place-content-center;
@@ -169,7 +302,10 @@
   border-bottom: none;
 }
 
-/* Center layout */
+/* ============================================================
+   Center layout
+   ============================================================ */
+
 .slidev-layout.center {
   @apply h-full grid place-content-center text-center;
 }
@@ -178,7 +314,10 @@
   border-bottom: none;
 }
 
-/* End layout */
+/* ============================================================
+   End layout
+   ============================================================ */
+
 .slidev-layout.end {
   @apply h-full grid place-content-center text-center;
 }
@@ -188,7 +327,10 @@
   border-bottom: none;
 }
 
-/* Footer / Global-bottom */
+/* ============================================================
+   Footer (global-bottom)
+   ============================================================ */
+
 .fhnw-footer {
   position: absolute;
   bottom: 0;
@@ -196,20 +338,17 @@
   right: 0;
   z-index: 100;
   height: 2rem;
-  background: #FDE70E;
+  background: var(--fhnw-yellow);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.6rem;
-  color: #000000;
+  color: var(--fhnw-black);
 }
 
-.fhnw-footer-left {
-  font-weight: 400;
-}
-
+.fhnw-footer-left,
 .fhnw-footer-right {
   font-weight: 400;
 }
