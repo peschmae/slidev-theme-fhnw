@@ -500,6 +500,10 @@
   margin-bottom: 0;
 }
 
+.fhnw-callout--mantra {
+  border-left-color: var(--fhnw-yellow);
+}
+
 .fhnw-callout--warning {
   border-left-color: var(--fhnw-danger);
 }

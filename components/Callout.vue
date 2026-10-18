@@ -14,7 +14,7 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
   /** note: neutral remark · warning: pitfall or risk · highlight: key takeaway */
-  type?: 'note' | 'warning' | 'highlight'
+  type?: 'note' | 'mantra' | 'warning' | 'highlight'
   /** Optional bold heading */
   title?: string
 }>(), {
