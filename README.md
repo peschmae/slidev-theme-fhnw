@@ -112,6 +112,93 @@ Content on the left
 Content on the right
 ```
 
+### Two Columns with Header
+
+The built-in `two-cols-header` puts the title above both columns, and its `::bottom::` slot holds a takeaway spanning both:
+
+```md
+---
+layout: two-cols-header
+layoutClass: cols-3-2
+---
+
+# Title
+
+::left::
+
+Left column
+
+::right::
+
+Right column
+
+::bottom::
+
+One sentence below both columns
+```
+
+`layoutClass` sets the column ratio for `two-cols` and `two-cols-header`: `cols-3-2`, `cols-2-3`, `cols-2-1` or `cols-1-2`. Without it, both columns are equal. The theme adds a `2rem` gap between the columns.
+
+### Compact Slides
+
+For dense tables, long code or many bullets, add `class: compact` to the slide's frontmatter. It reduces the text size, line height, table padding and code size:
+
+```md
+---
+class: compact
+---
+
+# A long table
+```
+
+UnoCSS's `text-sm` has no effect on a whole slide, because Slidev's base styles set the slide font size with a rule that takes precedence.
+
+## Components
+
+### Card
+
+A card for short items in a grid. Place cards in a UnoCSS grid:
+
+```md
+<div class="grid grid-cols-3 gap-4">
+<Card label="Lesson 1" title="OpenTelemetry concepts">
+
+Why instrument, the three signals
+
+</Card>
+<Card title="Recommended" variant="highlight">
+
+Markdown works inside, including lists
+
+</Card>
+</div>
+```
+
+| Prop | Values | Description |
+| --- | --- | --- |
+| `title` | text | Card heading |
+| `label` | text | Small uppercase label above the title |
+| `variant` | `default`, `highlight`, `dark` | Grey card, yellow top bar, or black card |
+
+### Callout
+
+A box for one remark that should stand out:
+
+```md
+<Callout type="warning" title="Pitfall">
+
+Bind to `0.0.0.0` in a container.
+
+</Callout>
+```
+
+| Prop | Values | Description |
+| --- | --- | --- |
+| `type` | `note`, `warning`, `highlight` | Grey with dark bar, grey with red bar, or yellow |
+| `title` | text | Optional bold heading |
+
+In both components, leave an empty line after the opening tag and before the closing tag so the Markdown inside is rendered.
+
 ## Layouts
 
 This theme provides:
