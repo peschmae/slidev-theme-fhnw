@@ -23,7 +23,7 @@
     "components",
     "styles",
     "setup",
-    "public",
+    "assets",
     "global-bottom.vue",
     "package.json"
   ],

@@ -9,10 +9,10 @@ const { $slidev } = useSlideContext()
     <!-- Yellow header bar with logos -->
     <div class="cover-header">
       <div class="cover-header-left">
-        <img src="/fhnw-logo.svg" class="cover-logo" alt="FHNW Logo" />
+        <img src="../assets/fhnw-logo.svg" class="cover-logo" alt="FHNW Logo" />
       </div>
       <div class="cover-header-right">
-        <img src="/swissuniversities.png" class="cover-swissuni" alt="swissuniversities" />
+        <img src="../assets/swissuniversities.png" class="cover-swissuni" alt="swissuniversities" />
       </div>
     </div>
 
