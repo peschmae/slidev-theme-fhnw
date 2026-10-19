@@ -22,15 +22,18 @@ withDefaults(defineProps<{
   /** Small uppercase label above the title, e.g. "Lesson 1" or "A" */
   label?: string
   /** default: grey card · highlight: yellow top bar · dark: black card */
-  variant?: 'default' | 'highlight' | 'dark'
+  type?: 'default' | 'highlight' | 'dark' | 'warning',
+  /** Icon to be shown before the label. needs to be a unocss icon class **/
+  icon?: string
 }>(), {
-  variant: 'default',
+  type: 'default',
 })
 </script>
 
 <template>
-  <div class="fhnw-card" :class="`fhnw-card--${variant}`">
-    <div v-if="label" class="fhnw-card-label">
+  <div class="fhnw-card" :class="`fhnw-card--${type}`">
+    <div v-if="label || icon" class="fhnw-card-label">
+      <span v-if="icon" class="fhnw-card-icon" :class="icon"></span>
       {{ label }}
     </div>
     <div v-if="title" class="fhnw-card-title">

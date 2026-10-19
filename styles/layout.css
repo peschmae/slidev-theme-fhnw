@@ -414,12 +414,14 @@
   flex-direction: column;
   gap: 0.35rem;
   padding: 1rem 1.25rem;
-  background: var(--fhnw-gray-100);
-  border: 1px solid var(--fhnw-gray-400);
-  border-top: 4px solid var(--fhnw-gray-400);
+  background: var(--fhnw-white);
+  border: 1px solid var(--fhnw-gray-600);
+  border-top: 4px solid var(--fhnw-gray-600);
 }
 
 .fhnw-card-label {
+  display: flex;
+  gap: 0.4em;
   font-size: 0.6rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -449,8 +451,12 @@
 
 /* Highlight: yellow top bar, e.g. the recommended option */
 .fhnw-card--highlight {
-  background: var(--fhnw-white);
   border-top-color: var(--fhnw-yellow);
+}
+
+/* Warning: red top bar */
+.fhnw-card--warning {
+  border-top-color: var(--fhnw-danger);
 }
 
 /* Dark: punchline card in a grid */
