@@ -34,11 +34,11 @@
     "screenshot": "slidev export example.md --format png"
   },
   "dependencies": {
-    "@slidev/types": "^52.18.0",
+    "@slidev/types": "^53.0.0",
     "@iconify-json/game-icons": "^1.2.4"
   },
   "devDependencies": {
-    "@slidev/cli": "^52.18.0"
+    "@slidev/cli": "^53.0.0"
   },
   "slidev": {
     "colorSchema": "light",
