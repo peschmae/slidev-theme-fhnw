@@ -186,7 +186,6 @@
 
 .slidev-layout a {
   color: var(--fhnw-body-color);
-  text-decoration: underline;
 }
 
 .slidev-layout a:hover {
