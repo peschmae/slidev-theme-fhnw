@@ -202,6 +202,10 @@ Bind to `0.0.0.0` in a container.
 
 In both components, leave an empty line after the opening tag and before the closing tag so the Markdown inside is rendered.
 
+### Missing images
+
+Images referenced from the deck's `public/` folder (e.g. `<img src="/sw07/diagram.png">` or `![](/sw07/diagram.png)`) that don't exist yet are replaced with a grey placeholder showing the missing path, instead of breaking the slide. The build log lists each missing image as a warning.
+
 ## Layouts
 
 This theme provides:

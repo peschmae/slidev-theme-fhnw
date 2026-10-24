@@ -51,6 +51,12 @@ spec:
 ```
 
 ---
+
+# Missing image
+
+<img src="/not-here.png" class="h100 w80">
+
+---
 class: compact
 ---
 
@@ -74,6 +80,38 @@ Key takeaways:
 - Logs are the most reliable signal for positive verification
 - Negative cases can be identified through events and probes
 - The implemented oracle is a solid foundation for broader use cases
+
+---
+layout: two-cols
+layoutClass: left-yellow
+---
+
+::left::
+
+# Observability
+
+## Service Discovery
+
+
+::right::
+
+<img src="/discovery.avif">
+
+---
+layout: two-cols-header
+layoutClass: left-yellow
+---
+
+::left::
+
+# Observability
+
+## Service Discovery
+
+
+::right::
+
+<img src="/discovery.avif">
 
 ---
 layout: two-cols-header
@@ -192,9 +230,8 @@ Every alert is a request for a human's attention. Spend it carefully.
 layout: end
 ---
 
-# Thank you for your attention
+# Questions?
 
-Questions and Feedback
 
 ---
 layout: section
