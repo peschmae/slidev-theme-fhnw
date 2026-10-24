@@ -13,7 +13,7 @@
 -->
 <script setup lang="ts">
 withDefaults(defineProps<{
-  /** note: neutral remark · warning: pitfall or risk · highlight: key takeaway */
+  /** note: neutral remark · mantra: one-line principle · warning: pitfall or risk · highlight: key takeaway */
   type?: 'note' | 'mantra' | 'warning' | 'highlight'
   /** Optional bold heading */
   title?: string

@@ -139,12 +139,12 @@ service:
 Why instrument, the three signals, API vs. SDK
 
 </Card>
-<Card label="Lesson 2" title="Auto-instrumentation" variant="highlight">
+<Card label="Lesson 2" title="Auto-instrumentation" type="highlight">
 
 How it injects itself, the Collector pipeline
 
 </Card>
-<Card label="Lesson 3" title="Grafana + exercise" variant="dark">
+<Card label="Lesson 3" title="Grafana + exercise" type="dark">
 
 Data sources, panels, first dashboard
 

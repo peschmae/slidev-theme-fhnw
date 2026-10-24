@@ -8,8 +8,10 @@
     Why instrument, the three signals, API vs. SDK
 
     </Card>
-    <Card title="Highlighted" variant="highlight">…</Card>
-    <Card title="Punchline" variant="dark">…</Card>
+    <Card title="Highlighted" type="highlight">…</Card>
+    <Card title="Pitfall" type="warning">…</Card>
+    <Card title="Punchline" type="dark">…</Card>
+    <Card label="Push" icon="i-game-icons:push" title="With an icon">…</Card>
   </div>
 
   Leave an empty line after the opening and before the closing tag
@@ -21,7 +23,7 @@ withDefaults(defineProps<{
   title?: string
   /** Small uppercase label above the title, e.g. "Lesson 1" or "A" */
   label?: string
-  /** default: grey card · highlight: yellow top bar · dark: black card */
+  /** default: grey top bar · highlight: yellow top bar · warning: red top bar · dark: black card */
   type?: 'default' | 'highlight' | 'dark' | 'warning',
   /** Icon to be shown before the label. needs to be a unocss icon class **/
   icon?: string

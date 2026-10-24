@@ -166,7 +166,7 @@ A card for short items in a grid. Place cards in a UnoCSS grid:
 Why instrument, the three signals
 
 </Card>
-<Card title="Recommended" variant="highlight">
+<Card label="Push" icon="i-game-icons:push" title="Recommended" type="highlight">
 
 Markdown works inside, including lists
 
@@ -178,7 +178,10 @@ Markdown works inside, including lists
 | --- | --- | --- |
 | `title` | text | Card heading |
 | `label` | text | Small uppercase label above the title |
-| `variant` | `default`, `highlight`, `dark` | Grey card, yellow top bar, or black card |
+| `icon` | UnoCSS icon class | Icon shown before the label, e.g. `i-game-icons:push` |
+| `type` | `default`, `highlight`, `warning`, `dark` | Grey, yellow or red top bar, or a black card |
+
+The theme ships the [game-icons](https://icon-sets.iconify.design/game-icons/) set. For icons from another set, install its `@iconify-json/<set>` package in your deck.
 
 ### Callout
 
@@ -194,7 +197,7 @@ Bind to `0.0.0.0` in a container.
 
 | Prop | Values | Description |
 | --- | --- | --- |
-| `type` | `note`, `warning`, `highlight` | Grey with dark bar, grey with red bar, or yellow |
+| `type` | `note`, `mantra`, `warning`, `highlight` | Grey with a dark, yellow or red bar, or a yellow box |
 | `title` | text | Optional bold heading |
 
 In both components, leave an empty line after the opening tag and before the closing tag so the Markdown inside is rendered.
