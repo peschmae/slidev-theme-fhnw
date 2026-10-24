@@ -323,8 +323,9 @@
 }
 
 .slidev-layout.end h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   border-bottom: none;
+  color: var(--fhnw-gray-100);
 }
 
 /* ============================================================
@@ -402,6 +403,24 @@
 /* Space between the columns and the ::bottom:: takeaway */
 .slidev-layout.two-cols-header .col-bottom:not(:empty) {
   margin-top: 1rem;
+}
+
+/* Yellow left column, edge to edge: layoutClass: left-yellow */
+.slidev-layout.two-columns.left-yellow,
+.slidev-layout.two-cols-header.left-yellow {
+  column-gap: 0rem;
+}
+.slidev-layout.two-columns.left-yellow .col-left,
+.slidev-layout.two-cols-header.left-yellow .col-left {
+  background: var(--fhnw-yellow);
+  /* Pull the column into the slide padding (2rem top, 2.5rem left, 3rem bottom) */
+  margin: 0rem 0 -3rem -2.5rem;
+  padding: 1rem 1.5rem 3rem 2.5rem;
+}
+.slidev-layout.two-cols-header.left-yellow .col-left h1,
+.slidev-layout.two-columns.left-yellow .col-left h1 {
+  font-weight: bold;
+  border-bottom: 0px;
 }
 
 /* ============================================================
