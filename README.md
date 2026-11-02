@@ -179,7 +179,7 @@ Markdown works inside, including lists
 | `title` | text | Card heading |
 | `label` | text | Small uppercase label above the title |
 | `icon` | UnoCSS icon class | Icon shown before the label, e.g. `i-game-icons:push` |
-| `type` | `default`, `highlight`, `warning`, `dark` | Grey, yellow or red top bar, or a black card |
+| `type` | `default`, `highlight`, `warning`, `success`, `dark` | Grey, yellow or red top bar, or a black card |
 
 The theme ships the [game-icons](https://icon-sets.iconify.design/game-icons/) set. For icons from another set, install its `@iconify-json/<set>` package in your deck.
 

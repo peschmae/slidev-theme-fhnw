@@ -477,6 +477,11 @@
   border-top-color: var(--fhnw-danger);
 }
 
+/* Success: green top bar */
+.fhnw-card--success {
+  border-top-color: var(--fhnw-success);
+}
+
 /* Dark: punchline card in a grid */
 .fhnw-card--dark {
   background: var(--fhnw-black);
