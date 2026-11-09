@@ -467,6 +467,12 @@
   margin-bottom: 0;
 }
 
+/* Compact: less padding top/bottom */
+.fhnw-card--compact {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 /* Highlight: yellow top bar, e.g. the recommended option */
 .fhnw-card--highlight {
   border-top-color: var(--fhnw-yellow);
@@ -487,6 +493,12 @@
   background: var(--fhnw-black);
   border-color: var(--fhnw-black);
   border-top-color: var(--fhnw-yellow);
+  color: var(--fhnw-white);
+}
+.fhnw-card--dark h1,
+.fhnw-card--dark h2,
+.fhnw-card--dark h3,
+.fhnw-card--dark h4 {
   color: var(--fhnw-white);
 }
 

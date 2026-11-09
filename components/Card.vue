@@ -24,7 +24,7 @@ withDefaults(defineProps<{
   /** Small uppercase label above the title, e.g. "Lesson 1" or "A" */
   label?: string
   /** default: grey top bar · highlight: yellow top bar · warning: red top bar · dark: black card · success: green top bar */
-  type?: 'default' | 'highlight' | 'dark' | 'warning' | 'success',
+  type?: 'default' | 'highlight' | 'dark' | 'warning' | 'success' | 'compact',
   /** Icon to be shown before the label. needs to be a unocss icon class **/
   icon?: string
 }>(), {
